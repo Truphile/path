@@ -27,5 +27,19 @@ public class CustomFileWriterTest {
         assertEquals(json, dataFromFile);
 
     }
+    @Test
+    public void testCanwriteToFileWithNewLine() throws IOException {
+        String fileLocat = "/home/scripted/Documents/NewJavaWorks/path/src";
+        String filenames = "user.yaml";
+        Path pile = Path.of(fileLocat,filenames);
+        String yaml = """
+                name: Zeus
+                        age: 100000000
+                        country: USA
+        """;
+        CustomFileWriter.writeYamlToFile(pile, yaml);
+        String dataFromFile = Files.readString(pile);
+        assertEquals(yaml, dataFromFile);
+    }
 
 }

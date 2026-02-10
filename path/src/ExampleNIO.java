@@ -15,16 +15,23 @@ public class ExampleNIO {
 
         String fileLoca = "/home/scripted/Documents/NewJavaWorks/path/src";
         String filename = "user.json";
-        Path file = Path.of(fileLoca,filename);
+        Path pile = Path.of(fileLoca,filename);
+        try {
+            Files.createFile(pile);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        String fileLocat = "/home/scripted/Documents/NewJavaWorks/path/src";
+        String filenames = "user.yaml";
+        Path file = Path.of(fileLocat,filenames);
         try {
             Files.createFile(file);
         }catch (IOException e){
             e.printStackTrace();
 
         }
-
-
-
 
     }
 }

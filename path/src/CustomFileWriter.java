@@ -6,6 +6,10 @@ import java.nio.file.Path;
 public class CustomFileWriter {
 
     public static void writeJsonToFile(Path file, String json) throws IOException {
-        Files.writeString(file, json, StandardCharsets.UTF_8);
+        Files.writeString(file, json);
+    }
+
+    public static void writeYamlToFile(Path pile, String yaml) throws IOException {
+        Files.writeString(pile,yaml);
     }
 }
