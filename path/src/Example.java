@@ -4,6 +4,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Example {
+
+    /**
+     * 1. Create a path that points to the location on the computer OS
+     * 2. Use a method of class Files to operate on the path
+     */
     public static void main(String[] args) {
         String fileLocation = "/home/scripted/IdeaProjects";
         Path path = Path.of(fileLocation);
