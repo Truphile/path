@@ -1,9 +1,8 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
-public class Example {
+public class ExampleNIO {
 
     /**
      * 1. Create a path that points to the location on the computer OS
