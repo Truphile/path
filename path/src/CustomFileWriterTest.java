@@ -42,4 +42,20 @@ public class CustomFileWriterTest {
         assertEquals(yaml, dataFromFile);
     }
 
+    @Test
+    public void testCanReadFromFile() throws IOException {
+        String fileLocat = "/home/scripted/Documents/NewJavaWorks/path/src";
+        String filenames = "user.yaml";
+        Path pile = Path.of(fileLocat,filenames);
+        String yaml = """
+                name: Zeus
+                        age: 100000000
+                        country: USA
+        """;
+        CustomFileWriter.readYamlFromFile(pile, yaml);
+        String readFromFile = Files.readString(pile);
+        assertEquals(yaml, readFromFile);
+
+    }
+
 }

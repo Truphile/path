@@ -12,4 +12,8 @@ public class CustomFileWriter {
     public static void writeYamlToFile(Path pile, String yaml) throws IOException {
         Files.writeString(pile,yaml);
     }
+
+    public static void readYamlFromFile(Path pile, String yaml) throws IOException {
+        Files.readString(pile);
+    }
 }
