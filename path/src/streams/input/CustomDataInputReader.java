@@ -1,17 +1,16 @@
 package streams.input;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.DataInputStream;
 
 public class CustomDataInputReader {
-    public static void main(String[] args)  {
-        String path = "/home/scripted/Documents/NewJavaWorks/path/src/user.json";
-        try (FileInputStream fileInputStream = new FileInputStream(path)) {
-            byte[] data = fileInputStream.readAllBytes();
-            System.out.println(new String(data));
-        } catch (IOException e) {
-            e.printStackTrace();
+    public static void main(String[] args) {
+        System.out.println("Enter your name: ");
+        try (DataInputStream dataInputStream = new DataInputStream(System.in);) {
+            byte[] data = dataInputStream.readNBytes(12);
+            System.out.println("Your name is: " + new String(data));
 
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }
